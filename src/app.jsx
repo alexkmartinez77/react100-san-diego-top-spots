@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from './header';
 import axios from 'axios';
+import TopSpot from './topspot';
 
 class App extends Component {
   constructor(props){
@@ -22,13 +23,9 @@ class App extends Component {
       <div className='App'>
         <div className="container">
           <Header />
-          <div className="row">
-            <div className="col">
-              <pre>
-                { JSON.stringify(this.state.topspots, null, 2) }
-              </pre>
-            </div>
-          </div>
+          {this.state.topspots.map((topspot) => 
+            <TopSpot key={topspot.id} obj={topspot} />
+          )}
         </div>
       </div>
     );
