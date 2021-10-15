@@ -4,8 +4,8 @@ export class TopSpot extends React.Component{
   render(){
     let {name, description, location: [long, lat],} = this.props.obj;
     return (
-      <div className="row well rounded bg-light m-2 p-2">
-        <div className="row">
+      <div className="row rounded bg-light m-2 p-2">
+        <div className="well">
           <h4>{name}</h4>
           <p>{description}</p>
         </div>
