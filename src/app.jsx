@@ -3,6 +3,7 @@ import Header from './header';
 import axios from 'axios';
 import TopSpot from './topspot';
 
+
 class App extends Component {
   constructor(props){
     super(props);
@@ -13,7 +14,7 @@ class App extends Component {
 
   componentWillMount() {
     axios
-    .get('https://origin-top-spots-api.herokuapp.com/api/topspots')
+    .get('/topSpots')
     .then(response => response.data)
     .then(topspots => this.setState({ topspots }));
   }
