@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import Header from './header';
 import axios from 'axios';
 import TopSpot from './topspot';
-
-
+import SelectList from './selectList';
 class App extends Component {
   constructor(props){
     super(props);
@@ -22,8 +21,9 @@ class App extends Component {
   render() {
     return (
       <div className='App'>
-        <div className="container">
+        <div className="container">        
           <Header />
+          <SelectList array={this.state.topspots}/>
           {this.state.topspots.map((topspot) => 
             <TopSpot key={topspot.id} obj={topspot} />
           )}
