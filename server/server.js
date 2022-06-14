@@ -10,7 +10,7 @@ app.use(express.static('public'));
 
 app.get('/topSpots', function(req, res){
     axios
-    .get('https://origin-top-spots-api.herokuapp.com/api/topspots')
+    .get('https://www.cccareerssdts.demo.coolify.io/')
     .then(response => res.send(response.data))
 })
 
