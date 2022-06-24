@@ -8,7 +8,7 @@ export class TopSpot extends React.Component{
         <div className="well">
           <h4>{name}</h4>
           <p>{description}</p>
-        </div>
+          <a href={`https://maps.google.com/?q=${long},${lat}`}><buton></buton></a>
         <div className="row">
           <div className="col text-center">
             <a className="googleLink" href={`https://www.google.com/maps?q=${long},${lat}`} target="_blank">
@@ -24,6 +24,7 @@ export class TopSpot extends React.Component{
                 </button>
               </a>
             </div>
+        </div>
         </div>
       </div>
   
