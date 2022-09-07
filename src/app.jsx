@@ -14,7 +14,7 @@ class App extends Component {
   componentWillMount() {
 
     axios
-    .get('https://www.cccareerssdts.demo.coolify.io/')
+    .get('https://sd-top-spots.tbox.tools/')
     .then(response => response.data)
     .then(topspots => this.setState({ topspots }));
 
